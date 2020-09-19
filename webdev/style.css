@@ -1,0 +1,72 @@
+.background-header {
+    width: 1600px;
+    /* background-color: red; */
+    background-image: url("assets/bg-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 744px;
+    display: flex;
+    justify-content: center;
+}
+
+.vis-hidden {
+    display: none;
+}
+
+.navigation {
+    width: 1062px;
+    position: relative;
+    /* width: 1600px; */
+    height: 97px;
+    /* background-color: red; */
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.navbar-list {
+    position: absolute;
+    left: 233px;
+    /* background-color: green; */
+    width: 582px;
+    height: 97px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 100;
+    /* letter-spacing: 5px; */
+    font-size: 14px;
+    line-height: 140%;
+}
+
+.navbar-list-item a {
+    text-decoration: none;
+    color: #ffffff;
+    /* display: none; */
+}
+
+.navbar-list-item:first-child {
+    font-style: light;
+    font-weight: 300;
+    border-bottom: 1.5px solid #ffffff;
+}
+
+.navbar-list-item:nth-child(2) {
+    position: relative;
+    left: -7px;
+}
+
+.navbar-list-item:nth-child(3) {
+    position: relative;
+    top: 1px;
+}
+
+.navbar-list-item:nth-child(4) {
+    position: relative;
+    left: 8px;
+}
