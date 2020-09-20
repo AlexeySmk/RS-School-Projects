@@ -345,3 +345,88 @@
     .implement-article-text .section-header-description {
         margin-bottom: 31px;
     }
+    
+    .signup-section {
+        width: 1600px;
+        height: 524px;
+        background-image: url("assets/sign-up-background.png");
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+    
+    .signup-form {
+        width: 406px;
+        height: 107px;
+        margin-top: 199px;
+        /* background-color: red; */
+    }
+    
+    .form-header {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    
+    .input-wrapper {
+        display: flex;
+        width: 406px;
+    }
+    
+    #form-email-input {
+        height: 42px;
+        width: 313px;
+        outline: none;
+        padding-left: 22px;
+    }
+    
+    #form-email-input::placeholder {
+        /* padding-left: 20px; */
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140%;
+        color: #373737;
+        opacity: .5;
+    }
+    
+    .email-button {
+        width: 66px;
+        height: 47.1px;
+        background: #00AFDB;
+        border: none;
+        margin-top: 0.2px;
+        margin-left: -1px;
+        position: relative;
+    }
+    
+    .email-button:focus,
+    .email-button:active {
+        outline: none;
+    }
+    
+    .email-button:hover {
+        background-color: #009CC2;
+    }
+    
+    .btn-img {
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 26px;
+        width: 14.66px;
+        height: 8.66px;
+        border-top: 4px solid #ffffff;
+        border-right: 4px solid #ffffff;
+        box-sizing: border-box;
+        transform: rotate(133deg);
+    }
