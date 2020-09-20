@@ -510,7 +510,7 @@
     }
     
     .button1:after {
-        content: url("assets/icon-apple.svg");
+        content: url("assets/apple.png");
         display: block;
         position: absolute;
         top: 0px;
@@ -522,7 +522,7 @@
     }
     
     .button2:after {
-        content: url("assets/icon-android.svg");
+        content: url("assets/android.png");
         display: block;
         position: absolute;
         top: 0px;
@@ -615,6 +615,10 @@
     .footer-nav-item a:hover {
         color: #999999;
         transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
     }
     
     .author {
