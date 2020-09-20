@@ -116,6 +116,7 @@
         color: #ffffff;
         background-color: #00AFDB;
         border: none;
+        transition: all 0.2s;
     }
     
     .header-button:hover {
@@ -429,4 +430,208 @@
         border-right: 4px solid #ffffff;
         box-sizing: border-box;
         transform: rotate(133deg);
+    }
+    
+    .download-section {
+        width: 1600px;
+        height: 464px;
+        background-color: #F5F6F7;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .download-article {
+        width: 480px;
+        height: 200px;
+        margin-top: 120px;
+        /* background-color: lightblue; */
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+    
+    .download-header {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #373737;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    
+    .download-header-description {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 143%;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    
+    .download-form {
+        display: flex;
+        width: 480px;
+        /* margin-left: 51px; */
+    }
+    
+    .btn-wrapper {
+        display: flex;
+        margin-right: 99px;
+    }
+    
+    .download-form-button {
+        width: 127px;
+        height: 46px;
+        background-color: #00AFDB;
+        border: none;
+        position: relative;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        outline: none;
+    }
+    
+    .download-form-button:hover {
+        background-color: #009CC2;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    
+    .button1:after {
+        content: url("assets/icon-apple.svg");
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: -59px;
+        width: 59px;
+        height: 46px;
+        background-color: #009CC2;
+        line-height: 54px;
+    }
+    
+    .button2:after {
+        content: url("assets/icon-android.svg");
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: -59px;
+        width: 59px;
+        height: 46px;
+        background-color: #009CC2;
+        line-height: 59px;
+    }
+    
+    .btn-wrapper:first-child {
+        margin-left: 38px;
+        margin-right: 89px;
+    }
+    /* footer */
+    
+    .footer {
+        width: 1600px;
+        height: 185px;
+        background-color: #000000;
+        display: flex;
+    }
+    
+    .footer-nav {
+        margin-top: 58px;
+        margin-left: 160px;
+        display: flex;
+    }
+    
+    .footer-nav-list {
+        padding: 0;
+        display: flex;
+        height: 20px;
+        margin-right: 382px;
+    }
+    
+    .footer-nav-item {
+        padding-right: 20px;
+        /* border-right: 1px solid grey; */
+    }
+    
+    .footer-nav-item:first-child {
+        margin-right: 21px;
+        position: relative;
+    }
+    
+    .footer-nav-item:first-child:after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-right: 1px solid #4E4E4E;
+        position: absolute;
+        top: 6px;
+        right: -1px;
+    }
+    
+    .footer-nav-item:nth-child(2) {
+        margin-right: 21px;
+        position: relative;
+    }
+    
+    .footer-nav-item:nth-child(2):after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-right: 1px solid #4E4E4E;
+        position: absolute;
+        top: 6px;
+        right: -1px;
+    }
+    
+    .footer-nav-item:last-child {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .footer-nav-item a {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140%;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    
+    .footer-nav-item a:hover {
+        color: #999999;
+        transition: all 0.2s;
+    }
+    
+    .author {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140%;
+        text-align: center;
+        color: #818181;
+    }
+    
+    .logo-link {
+        margin-top: 2px;
+        margin-right: 449px;
+    }
+    
+    .author {
+        margin-top: 16px;
     }
