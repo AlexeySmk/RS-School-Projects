@@ -251,6 +251,7 @@ sqrtOperation.addEventListener("click", button => {
 
     calculator.sqrt()
     calculator.updateDisplay();
+
 })
 
 console.log(calculator);
