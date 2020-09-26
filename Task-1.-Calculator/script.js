@@ -27,12 +27,29 @@ class Calculator {
 
     }
 
+
     chooseOperation(operation) {
-        if (this.currentOperand === '') return
+
+
+        if (this.currentOperand === '' || this.currentOperand === '-') {
+
+            if (operation === '-') {
+
+                this.currentOperand = operation;
+                this.currentOperandTextElement.innerText = '-';
+            }
+
+            return;
+
+        }
+
+
         if (this.previousOperand !== '') {
             this.compute();
 
         }
+
+
         this.operation = operation;
         this.previousOperand = this.currentOperand;
         this.currentOperand = '';
@@ -40,13 +57,18 @@ class Calculator {
 
     }
 
+
+
+
     compute() {
 
         let computation;
         const prev = parseFloat(this.previousOperand);
         const current = parseFloat(this.currentOperand);
+        console.log("prev:" + prev);
+        console.log("current:" + current);
         // console.log(isNaN(prev));
-        if (isNaN(prev) || isNaN(current)) return
+        // if (isNaN(prev) || isNaN(current)) return;
         switch (this.operation) {
 
             case '+':
@@ -64,14 +86,14 @@ class Calculator {
                 // case "√":
                 //     computation = Math.sqrt(prev);
                 //     break;
-            case "x²":
+            case "xn":
                 computation = Math.pow(prev, current);
                 break;
             default:
                 return;
         }
 
-        this.currentOperand = computation;
+        this.currentOperand = parseFloat(computation.toFixed(2));
         this.operation = undefined;
         this.previousOperand = '';
 
@@ -85,29 +107,42 @@ class Calculator {
         this.currentOperand = result;
         if (isNaN(curr)) {
 
-            alert("Сначала введите корень");
+            alert("Сначала введите число");
             this.clear();
 
         }
-        this.operation = "";
-        this.previousOperand = '';
+
+        if (curr < 1) {
+
+            alert("Нельзя извлечь корень из отрицательного числа");
+            this.clear();
+
+        }
+        this.operation = "√";
+        this.previousOperand = curr;
     }
 
 
     getDisplayNumber(number) {
+        // console.log(number);
         const stringNumber = number.toString();
         const integerDigits = parseFloat(stringNumber.split('.')[0]);
         const decimelDigits = stringNumber.split('.')[1];
+        // console.log(integerDigits);
+        // console.log(decimelDigits);
         let integerDisplay;
         if (isNaN(integerDigits)) {
 
             integerDisplay = '';
+            // console.log(integerDigits);
 
         } else {
 
             integerDisplay = integerDigits.toLocaleString("en", {
                 maximumFractionDigits: 0
             });
+
+            // console.log("IntegerDisplay: " + integerDisplay);
 
         }
 
@@ -125,7 +160,16 @@ class Calculator {
 
     updateDisplay() {
 
-        this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand);
+        if (this.currentOperand === "-") {
+
+            this.currentOperandTextElement.innerText = "-";
+
+        } else {
+
+            this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand);
+
+        }
+
         if (this.operation != null) {
             this.previousOperandTextElement.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`;
         } else {
@@ -133,6 +177,13 @@ class Calculator {
             this.previousOperandTextElement.innerText = '';
 
         }
+
+        if (this.operation === "√") {
+
+            this.previousOperandTextElement.innerText = `√ ${this.getDisplayNumber(this.previousOperand)}`;
+
+        }
+
     }
 
 
