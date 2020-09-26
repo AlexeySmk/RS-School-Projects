@@ -4,6 +4,7 @@ class Calculator {
         this.previousOperandTextElement = previousOperandTextElement;
         this.currentOperandTextElement = currentOperandTextElement;
         this.clear();
+        this.computationCheck = false;
     }
 
 
@@ -23,6 +24,12 @@ class Calculator {
 
     appendNumber(number) {
         if (number === "." && this.currentOperand.includes(".")) return;
+        if (this.computationCheck === true) {
+
+            this.clear();
+            this.computationCheck = false;
+
+        }
         this.currentOperand = this.currentOperand.toString() + number.toString();
 
     }
@@ -57,6 +64,55 @@ class Calculator {
 
     }
 
+
+    autoCompute() {
+
+        let computation;
+        const prev = parseFloat(this.previousOperand);
+        const current = parseFloat(this.currentOperand);
+        console.log("prev:" + prev);
+        console.log("current:" + current);
+        // console.log(isNaN(prev));
+        // if (isNaN(prev) || isNaN(current)) return;
+        switch (this.operation) {
+
+            case '+':
+                computation = prev + current;
+                break;
+            case '-':
+                computation = prev - current;
+                break;
+            case '*':
+                computation = prev * current;
+                break;
+            case '÷':
+                computation = prev / current;
+                break;
+                // case "√":
+                //     computation = Math.sqrt(prev);
+                //     break;
+            case "xn":
+                computation = Math.pow(prev, current);
+                break;
+            default:
+                return;
+        }
+
+        if (this.currentOperand.includes(".000")) {
+
+            this.currentOperand = parseFloat(computation);
+
+        } else {
+
+            this.currentOperand = parseFloat(computation.toFixed(2));
+
+        }
+
+        this.operation = undefined;
+        this.previousOperand = '';
+        this.computationCheck = true;
+
+    }
 
 
 
@@ -93,7 +149,7 @@ class Calculator {
                 return;
         }
 
-        if (this.currentOperand.includes(".000") || this.previousOperand.includes(".000")) {
+        if (this.currentOperand.includes(".000")) {
 
             this.currentOperand = parseFloat(computation);
 
@@ -105,7 +161,6 @@ class Calculator {
 
         this.operation = undefined;
         this.previousOperand = '';
-
     }
 
     sqrt() {
@@ -236,7 +291,7 @@ operationButtons.forEach(button => {
 
 equalsButton.addEventListener("click", button => {
 
-    calculator.compute();
+    calculator.autoCompute();
     calculator.updateDisplay();
 
 })
