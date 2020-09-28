@@ -1,5 +1,11 @@
     /* header */
     
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .background-header {
         width: 1600px;
         /* background-color: red; */
