@@ -4,15 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="owfont-regular.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Momentum</title>
 </head>
 
 <body>
+    <div class="overlay"></div>
+
+    <div class="weather">
+        <div class="city" contenteditable="true"></div>
+        <i class="weather-icon owf"></i>
+        <div class="weather-about">
+            <div class="weather-temperature"></div>
+            <div class="weather-speed"></div>
+            <div class="weather-humidity"></div>
+        </div>
+        <div class="weather-description"></div>
+    </div>
+    <button id="arrow"><img src="images/icons/arrow.png" alt="arrow" width="30" height="25"></button>
+
+    <time id="time"></time>
+    <date id="date"></date>
+    <h1>
+
+        <span id="greeting"></span>
+        <span id="name" contenteditable="true"></span>
+
+    </h1>
 
 
+    <h2>What Is Your Focus For Today?</h2>
+    <h2 id="focus" contenteditable="true"></h2>
 
-    <script src="script.js"></script>
+    <figure class="quote">
+        <blockquote>
+        </blockquote>
+        <figcaption>
+        </figcaption>
+    </figure>
+
+    <button class="refreshQuote">refresh</button>
+
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/quote.js"></script>
+    <script src="scripts/weather.js"></script>
 </body>
 
 </html>
