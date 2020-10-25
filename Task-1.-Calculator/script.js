@@ -65,7 +65,8 @@ class Calculator {
     }
 
 
-    autoCompute() {
+    compute() {
+
 
         let computation;
         const prev = parseFloat(this.previousOperand);
@@ -98,15 +99,7 @@ class Calculator {
                 return;
         }
 
-        if (this.currentOperand.includes(".000")) {
-
-            this.currentOperand = parseFloat(computation);
-
-        } else {
-
-            this.currentOperand = parseFloat(computation.toFixed(2));
-
-        }
+        this.currentOperand = parseFloat(computation.toFixed(2));
 
         this.operation = undefined;
         this.previousOperand = '';
