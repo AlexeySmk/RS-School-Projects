@@ -3,7 +3,10 @@ const time = document.getElementById("time"),
     greeting = document.getElementById("greeting"),
     name = document.getElementById("name"),
     focus = document.getElementById("focus"),
-    btn = document.getElementById("arrow");
+    btn = document.getElementById("arrow"),
+    blackW = document.querySelector(".weather-about"),
+    cityB = document.querySelector(".city"),
+    focusB = document.querySelector("#focus");
 
 
 function showTime() {
@@ -22,7 +25,14 @@ function showTime() {
     const amPm = hour >= 12 ? "PM" : "AM";
 
     hour = hour % 24 || 24;
+    if (hour === 24) {
+        hour = "00";
 
+    } else if (hour >= 1 && hour <= 9) {
+
+        hour = `0${hour}`;
+
+    }
     time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(sec)} ${amPm}`;
     tDate.innerHTML = `${days}, ${months} ${date}`;
 
@@ -54,7 +64,6 @@ function viewBgImage(data) {
 
     img.onload = () => {
         body.style.backgroundImage = `url(${src})`;
-
     };
 
 }
@@ -98,6 +107,10 @@ function setBgGreet() {
         getImage(pathNight);
         greeting.textContent = "Good Night,";
         document.body.style.color = "white";
+        blackW.style.color = "black";
+        cityB.style.color = "black";
+        focusB.style.color = "black";
+        btn.style.background = "white";
 
     }
 
