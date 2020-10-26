@@ -7,10 +7,11 @@
     <title>Shelter</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
-
+    <div class="overlay overlay-inactive"></div>
     <header class="cozy-background">
         <h1 class="vis-hidden">Cozy House</h1>
         <nav class="cozy-navigation">
@@ -22,7 +23,21 @@
 
             </div>
 
-            <div class="burger-menu"></div>
+            <div class="burger-menu burger-menu-inactive" id="burger-btn"></div>
+
+
+            <div class="burger burger-inactive">
+
+
+                <ul class="cozy-nav-list">
+                    <li class="cozy-nav-item"><a href="#1">About the shelter</a></li>
+                    <li class="cozy-nav-item"><a href="pages/main/index.html">Our pets</a></li>
+                    <li class="cozy-nav-item"><a href="#3">Help the shelter</a></li>
+                    <li class="cozy-nav-item"><a href="#4">Contacts</a></li>
+                </ul>
+
+            </div>
+
 
             <ul class="cozy-nav-list">
                 <li class="cozy-nav-item"><a href="#1">About the shelter</a></li>
@@ -82,7 +97,7 @@
 
             <div class="slider">
 
-                <button class="switch"></button>
+                <button class="switch" id="left-button"></button>
 
                 <div class="slider-item-wrapper">
 
@@ -90,7 +105,7 @@
 
                         <img src="assets/images/pets-katrine.png" alt=" katrine-image " width="270" height="270">
                         <h3 class="slider-item-header ">Katrine</h3>
-                        <button class="slider-item-btn ">Learn more</button>
+                        <button class="slider-item-btn pop1">Learn more</button>
 
                     </div>
 
@@ -98,15 +113,15 @@
 
                         <img src="assets/images/pets-jennifer.png " alt="jennifer-image " width="270" height="270">
                         <h3 class="slider-item-header ">Jennifer</h3>
-                        <button class="slider-item-btn ">Learn more</button>
+                        <button class="slider-item-btn pop2">Learn more</button>
 
                     </div>
 
                     <div class="slider-item ">
 
                         <img src="assets/images/pets-woody.png " alt="woody-image " width="270" height="270">
-                        <h3 class="slider-item-header ">Woody</h3>
-                        <button class="slider-item-btn ">Learn more</button>
+                        <h3 class="slider-item-header">Woody</h3>
+                        <button class="slider-item-btn pop3">Learn more</button>
 
                     </div>
 
@@ -116,7 +131,7 @@
                     <button class="switch switch-320"></button>
                     <button class="switch switch-320"></button>
                 </div>
-                <button class="switch"></button>
+                <button class="switch" id="right-button"></button>
 
             </div>
 
@@ -126,6 +141,28 @@
 
     </section>
 
+
+    <div class="popup-wrapper">
+        <div class="popup">
+            <img src="" alt="pet" width="500" height="500" class="popup-image">
+            <div class="popup-main">
+                <div class="popup-close"><img src="assets/icons/vector.svg" alt="close"></div>
+                <h1 class="popup-header"></h1>
+                <h2 class="popup-description"></h2>
+                <p class="popup-text"></p>
+
+                <div class="popup-about">
+
+                    <p class="popup-about-age"><span class="bold">Age:</span></p>
+                    <p class="popup-about-inoculations"><span class="bold">Inoculations:</span></p>
+                    <p class="popup-about-diseases"><span class="bold">Diseases:</span></p>
+                    <p class="popup-about-parasites"><span class="bold">Parasites:</span></p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <section class="help-section ">
         <h2 class="vis-hidden ">help our shelter</h2>
@@ -354,6 +391,203 @@
     </section>
 
 
+    <section class="help-section hide">
+        <h2 class="vis-hidden ">help our shelter</h2>
+
+        <article class="help-article ">
+
+            <h2 class="help-article-header ">How you can help our shelter</h2>
+
+            <div class="help-article-needs">
+
+                <div class="needs-items-wrapper ">
+
+                    <div class="needs-item ">
+
+                        <img src="assets/icons/icon-pet-food.png " alt="pet-food ">
+
+                        <p class="needs-item-name ">Pet food</p>
+
+                    </div>
+
+
+                    <div class="needs-item ">
+
+                        <img src="assets/icons/icon-transportation.png " alt="transportation ">
+
+                        <p class="needs-item-name ">Transportation</p>
+
+                    </div>
+
+
+                    <div class="needs-item ">
+
+                        <img src="assets/icons/icon-toys.png " alt="toys ">
+
+                        <p class="needs-item-name ">Toys</p>
+
+                    </div>
+
+
+                    <div class="needs-item ">
+
+                        <img src="assets/icons/icon-bowls-and-cups.png " alt="bowls-and-cups.png ">
+
+                        <p class="needs-item-name ">Bowls and cups</p>
+
+                    </div>
+
+
+                    <div class="needs-item ">
+
+                        <img src="assets/icons/icon-shampoos.png " alt="shampoos ">
+
+                        <p class="needs-item-name ">Shampoos</p>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="needs-items-wrapper ">
+
+                    <div class="needs-item ">
+
+                        <img src="assets/icons/icon-vitamins.png " alt="vitamins ">
+
+
+                        <p class="needs-item-name ">Vitamins</p>
+
+
+                    </div>
+
+
+                    <div class="needs-item ">
+
+                        <img src="assets/icons/icon-medicines.png " alt="medicines ">
+
+                        <p class="needs-item-name ">Medicines</p>
+
+                    </div>
+
+
+                    <div class="needs-item ">
+
+                        <img src="assets/icons/icon-collars-leashes.png " alt="collars-leashes ">
+
+                        <p class="needs-item-name ">Collars / leashes</p>
+
+                    </div>
+
+
+                    <div class="needs-item ">
+
+                        <img src="assets/icons/icon-sleeping-area.png " alt="sleeping-area ">
+
+                        <p class="needs-item-name ">Sleeping areas</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="help-article-needs help-article-needs-hidden-768">
+
+                <div class="needs-items-wrapper">
+
+
+                    <div class="needs-items-wrapper ">
+
+                        <div class="needs-item ">
+
+                            <img src="assets/icons/icon-pet-food.png " alt="pet-food ">
+
+                            <p class="needs-item-name ">Pet food</p>
+
+                        </div>
+
+                        <div class="needs-item ">
+
+                            <img src="assets/icons/icon-transportation.png " alt="transportation ">
+
+                            <p class="needs-item-name ">Transportation</p>
+
+                        </div>
+
+                        <div class="needs-item ">
+
+                            <img src="assets/icons/icon-toys.png " alt="toys ">
+
+                            <p class="needs-item-name ">Toys</p>
+
+                        </div>
+
+
+                        <div class="needs-item ">
+
+                            <img src="assets/icons/icon-bowls-and-cups.png " alt="bowls-and-cups.png ">
+
+                            <p class="needs-item-name ">Bowls and cups</p>
+
+                        </div>
+
+
+                        <div class="needs-item ">
+
+                            <img src="assets/icons/icon-shampoos.png " alt="shampoos ">
+
+                            <p class="needs-item-name ">Shampoos</p>
+
+
+                        </div>
+
+
+                        <div class="needs-item ">
+
+                            <img src="assets/icons/icon-vitamins.png " alt="vitamins ">
+
+
+                            <p class="needs-item-name ">Vitamins</p>
+
+
+                        </div>
+
+                        <div class="needs-item ">
+
+                            <img src="assets/icons/icon-medicines.png " alt="medicines ">
+
+                            <p class="needs-item-name ">Medicines</p>
+
+                        </div>
+
+                        <div class="needs-item ">
+
+                            <img src="assets/icons/icon-collars-leashes.png " alt="collars-leashes ">
+
+                            <p class="needs-item-name ">Collars / leashes</p>
+
+                        </div>
+
+
+                        <div class="needs-item ">
+
+                            <img src="assets/icons/icon-sleeping-area.png " alt="sleeping-area ">
+
+                            <p class="needs-item-name ">Sleeping areas</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </article>
+
+    </section>
+
+
     <section class="inAddition-section ">
         <h2 class="vis-hidden ">donation</h2>
 
@@ -437,6 +671,9 @@
 
     </footer>
 
+    <script src="scripts/script.js"></script>
+    <script src="scripts/popup.js"></script>
+    <script src="scripts/burger.js"></script>
 
 </body>
 

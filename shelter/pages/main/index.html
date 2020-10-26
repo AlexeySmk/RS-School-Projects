@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelter. Pets page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
     <link rel="stylesheet" href="normalize.css">
     <script src="script.js"></script>
 </head>
 
 <body>
-
+    <div class="overlay overlay-inactive"></div>
     <header class="cozy-header">
         <h1 class="vis-hidden">Cozy House</h1>
         <nav class="cozy-navigation">
@@ -23,11 +24,25 @@
 
             </div>
 
-            <div class="burger-menu"></div>
+            <div class="burger-menu burger-menu-inactive" id="burger-btn"></div>
+
+
+            <div class="burger burger-inactive">
+
+
+                <ul class="cozy-nav-list">
+                    <li class="cozy-nav-item"><a href="../../index.html">About the shelter</a></li>
+                    <li class="cozy-nav-item"><a href="#2">Our pets</a></li>
+                    <li class="cozy-nav-item"><a href="#3">Help the shelter</a></li>
+                    <li class="cozy-nav-item"><a href="#4">Contacts</a></li>
+                </ul>
+
+            </div>
+
 
             <ul class="cozy-nav-list">
                 <li class="cozy-nav-item"><a href="../../index.html">About the shelter</a></li>
-                <li class="cozy-nav-item"><a href="pages/main/index.html">Our pets</a></li>
+                <li class="cozy-nav-item"><a href="#2">Our pets</a></li>
                 <li class="cozy-nav-item"><a href="#3">Help the shelter</a></li>
                 <li class="cozy-nav-item"><a href="#4">Contacts</a></li>
             </ul>
@@ -49,7 +64,7 @@
 
                     <div class="pets-item-wrapper">
                         <h3 class="pets-item-header">Katrine</h3>
-                        <button class="pets-item-btn">Learn more</button>
+                        <button class="pets-item-btn pop1">Learn more</button>
                     </div>
 
 
@@ -61,7 +76,7 @@
 
                     <div class="pets-item-wrapper">
                         <h3 class="pets-item-header">Jennifer</h3>
-                        <button class="pets-item-btn">Learn more</button>
+                        <button class="pets-item-btn pop2">Learn more</button>
                     </div>
 
 
@@ -73,7 +88,7 @@
 
                     <div class="pets-item-wrapper">
                         <h3 class="pets-item-header">Woody</h3>
-                        <button class="pets-item-btn">Learn more</button>
+                        <button class="pets-item-btn pop3">Learn more</button>
                     </div>
 
 
@@ -85,7 +100,7 @@
 
                     <div class="pets-item-wrapper">
                         <h3 class="pets-item-header">Sophia</h3>
-                        <button class="pets-item-btn">Learn more</button>
+                        <button class="pets-item-btn pop4">Learn more</button>
                     </div>
 
 
@@ -97,7 +112,7 @@
 
                     <div class="pets-item-wrapper">
                         <h3 class="pets-item-header">Timmy</h3>
-                        <button class="pets-item-btn">Learn more</button>
+                        <button class="pets-item-btn pop5">Learn more</button>
                     </div>
 
 
@@ -109,7 +124,7 @@
 
                     <div class="pets-item-wrapper">
                         <h3 class="pets-item-header">Charly</h3>
-                        <button class="pets-item-btn">Learn more</button>
+                        <button class="pets-item-btn pop6">Learn more</button>
                     </div>
 
 
@@ -121,7 +136,7 @@
 
                     <div class="pets-item-wrapper">
                         <h3 class="pets-item-header">Scarlett</h3>
-                        <button class="pets-item-btn">Learn more</button>
+                        <button class="pets-item-btn pop7">Learn more</button>
                     </div>
 
 
@@ -133,7 +148,7 @@
 
                     <div class="pets-item-wrapper">
                         <h3 class="pets-item-header">Freddie</h3>
-                        <button class="pets-item-btn">Learn more</button>
+                        <button class="pets-item-btn pop8">Learn more</button>
                     </div>
 
 
@@ -153,7 +168,27 @@
         </article>
 
     </section>
+    <div class="popup-wrapper">
+        <div class="popup">
+            <img src="" alt="pet" width="500" height="500" class="popup-image">
+            <div class="popup-main">
+                <div class="popup-close"><img src="assets/icons/vector.svg" alt="close"></div>
+                <h1 class="popup-header"></h1>
+                <h2 class="popup-description"></h2>
+                <p class="popup-text"></p>
 
+                <div class="popup-about">
+
+                    <p class="popup-about-age"><span class="bold">Age:</span></p>
+                    <p class="popup-about-inoculations"><span class="bold">Inoculations:</span></p>
+                    <p class="popup-about-diseases"><span class="bold">Diseases:</span></p>
+                    <p class="popup-about-parasites"><span class="bold">Parasites:</span></p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <footer class="forQuestions-footer">
 
@@ -201,7 +236,9 @@
 
     </footer>
 
-
+    <script src="scripts/burger.js"></script>
+    <script src="scripts/popup.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
