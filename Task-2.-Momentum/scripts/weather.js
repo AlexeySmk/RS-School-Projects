@@ -17,10 +17,11 @@ async function getWeather() {
     }
 
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city.textContent}&lang=en&appid=2becca108eb9d8317b5a8ea99bf151fa&units=metric`;
+    // let url = `https://api.openweathermap.org/data/2.5/weather?q=${city.textContent}&appid=c8246f36528652a84a4fe4b3e053db27`
 
     const res = await fetch(url);
     const data = await res.json();
-    if (data.cod === "404") {
+    if (data.cod === 404 || data.cod === 401) {
 
         temperature.textContent = ``;
         windSpeed.textContent = ``;

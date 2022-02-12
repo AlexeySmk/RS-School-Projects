@@ -284,7 +284,7 @@ operationButtons.forEach(button => {
 
 equalsButton.addEventListener("click", button => {
 
-    calculator.autoCompute();
+    calculator.compute();
     calculator.updateDisplay();
 
 })
