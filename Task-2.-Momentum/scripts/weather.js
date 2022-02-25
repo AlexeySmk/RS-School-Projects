@@ -4,7 +4,6 @@ const icon = document.querySelector(".weather-icon"),
     windSpeed = document.querySelector(".weather-speed"),
     humidity = document.querySelector(".weather-humidity"),
     city = document.querySelector(".city");
-console.log(icon);
 
 
 async function getWeather() {
@@ -16,8 +15,7 @@ async function getWeather() {
 
     }
 
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city.textContent}&lang=en&appid=2becca108eb9d8317b5a8ea99bf151fa&units=metric`;
-    // let url = `https://api.openweathermap.org/data/2.5/weather?q=${city.textContent}&appid=c8246f36528652a84a4fe4b3e053db27`
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city.textContent}&lang=en&appid=c8246f36528652a84a4fe4b3e053db27&units=metric`;
 
     const res = await fetch(url);
     const data = await res.json();
@@ -30,7 +28,6 @@ async function getWeather() {
 
     }
 
-    console.log(data);
     icon.className = "weather-icon owf"
     icon.classList.add(`owf-${data.weather[0].id}`);
     icon.classList.add(`owf-5x`);
@@ -50,8 +47,6 @@ async function getWeather() {
     }
 
 }
-
-// getWeather();
 
 function setCity(e) {
 

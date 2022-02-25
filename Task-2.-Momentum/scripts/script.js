@@ -79,7 +79,7 @@ function getImage(base) {
     i++;
     localStorage.setItem("indexOfImg", index);
     btn.disabled = true;
-    setTimeout(function() { btn.disabled = false }, 1000);
+    setTimeout(function () { btn.disabled = false }, 1000);
 
 }
 
@@ -116,7 +116,7 @@ function setBgGreet() {
 
 }
 
-btn.addEventListener("click", function() {
+btn.addEventListener("click", function () {
     setBgGreet();
 });
 
@@ -128,8 +128,6 @@ function countTime() {
     return Math.round(diff / 1000);
 
 }
-
-console.log(countTime());
 
 
 // (countTime() * 1000)
@@ -193,13 +191,13 @@ function setFocus(e) {
 
 }
 
-name.addEventListener("click", function() {
+name.addEventListener("click", function () {
 
     name.innerText = "";
 
 })
 
-focus.addEventListener("click", function() {
+focus.addEventListener("click", function () {
 
     focus.innerText = "";
 
@@ -208,7 +206,7 @@ name.addEventListener("keypress", setName);
 name.addEventListener("blur", setName);
 focus.addEventListener("keypress", setFocus);
 focus.addEventListener("blur", setFocus);
-name.addEventListener("blur", function() {
+name.addEventListener("blur", function () {
 
     if (name.textContent === "") {
         console.log(1);
@@ -218,7 +216,7 @@ name.addEventListener("blur", function() {
 
 })
 
-focus.addEventListener("blur", function() {
+focus.addEventListener("blur", function () {
 
     if (focus.textContent === "") {
         focus.textContent = "Enter Your Focus";
